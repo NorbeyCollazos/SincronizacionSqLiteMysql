@@ -129,7 +129,9 @@ public class ActividadListaContactos extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mostrarDetalles(null);
+                //mostrarDetalles(null);
+                Intent intent = new Intent(ActividadListaContactos.this,ActividadInsercionContacto.class);
+                startActivity(intent);
             }
         });
     }
