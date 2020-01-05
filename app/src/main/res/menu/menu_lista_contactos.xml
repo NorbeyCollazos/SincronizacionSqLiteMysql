@@ -6,4 +6,10 @@
         android:icon="@drawable/icono_sync"
         android:title="@string/accion_sync"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/accion_cerrar_sesion"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:title="Cerrar sesion"
+        app:showAsAction="ifRoom" />
 </menu>

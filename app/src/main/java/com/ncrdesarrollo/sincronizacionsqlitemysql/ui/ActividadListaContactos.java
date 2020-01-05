@@ -6,6 +6,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.ncrdesarrollo.sincronizacionsqlitemysql.MainActivity;
 import com.ncrdesarrollo.sincronizacionsqlitemysql.R;
 import com.ncrdesarrollo.sincronizacionsqlitemysql.provider.Contrato;
 import com.ncrdesarrollo.sincronizacionsqlitemysql.provider.Contrato.Contactos;
@@ -108,6 +110,14 @@ public class ActividadListaContactos extends AppCompatActivity
                         "No hay conexion disponible. La sincronización queda pendiente",
                         Snackbar.LENGTH_LONG).show();
             }
+            return true;
+        }else if (id == R.id.accion_cerrar_sesion) {
+            SharedPreferences preferences = getSharedPreferences("preferencesLogin", Context.MODE_PRIVATE);
+            preferences.edit().clear().commit();
+
+            Intent intent = new Intent(ActividadListaContactos.this, MainActivity.class);
+            startActivity(intent);
+            finish();
             return true;
         }
 

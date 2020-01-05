@@ -14,18 +14,24 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity
-            android:name=".ui.ActivityDetalleContacto"
-            android:label="@string/title_activity_detalle_contacto"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".ui.ActividadListaContactos">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- esto es para que no presente error a partir de la version 9 -->
+        <activity android:name=".MainActivity">
+
+        </activity>
+        <activity
+            android:name=".ui.ActivityDetalleContacto"
+            android:label="@string/title_activity_detalle_contacto"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.ActividadListaContactos"></activity>
         <activity
             android:name=".ui.ActividadInsercionContacto"
             android:label="@string/titulo_actividad_insertar_contacto"
