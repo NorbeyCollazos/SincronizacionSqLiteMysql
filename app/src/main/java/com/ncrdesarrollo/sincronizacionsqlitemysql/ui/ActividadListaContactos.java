@@ -59,6 +59,7 @@ public class ActividadListaContactos extends AppCompatActivity
 
         // Reemplaza con tu clave
         UPreferencias.guardarClaveApi(this, "60d5b4e60cb6a70898f0cd17174e9edd");
+        //UPreferencias.guardarClaveApi(this, "1077866001");
 
         // Crear receptor de mensajes de sincronización
         receptorSync = new BroadcastReceiver() {
@@ -162,9 +163,9 @@ public class ActividadListaContactos extends AppCompatActivity
 
 
     void mostrarDetalles(Uri uri) {
-        Intent intent = new Intent(this, ActividadVerContacto.class);
+        Intent intent = new Intent(this, ActivityDetalleContacto.class);
         if (null != uri) {
-            intent.putExtra(ActividadVerContacto.URI_CONTACTO, uri.toString());
+            intent.putExtra(ActivityDetalleContacto.URI_CONTACTO, uri.toString());
         }
         startActivity(intent);
     }

@@ -51,6 +51,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
     // Recurso sync (10.0.3.2 -> Genymotion; 10.0.2.2 -> AVD)
     public static final String URL_SYNC_BATCH = "http://192.168.0.103/api.peopleapp.com/v1/sync";
     //public static final String URL_SYNC_BATCH = "https://sitiodepruebasncr.000webhostapp.com/api.peopleapp.com/v1/sync";
+    //public static final String URL_SYNC_BATCH = "https://crudcontactos.webcindario.com/v1/index.php/sync";
 
     private static final int ESTADO_PETICION_FALLIDA = 107;
     private static final int ESTADO_TIEMPO_ESPERA = 108;

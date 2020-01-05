@@ -10,4 +10,7 @@
     <dimen name="tamano_texto_item_lista">16sp</dimen>
     <dimen name="padding_horizontal_item_lista">16dp</dimen>
     <dimen name="padding_superior_item_lista">8dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>
